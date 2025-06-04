@@ -1,0 +1,151 @@
+/* Info text container - slides down from top */
+.info-text-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50% 0;
+    width: 80%;
+    max-width: 800px;
+    min-width: 400px;
+    max-height: 60%;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-width: 2px;
+    border-color: white;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+    transition-duration: 0.4s;
+    transition-property: translate, opacity;
+    transition-timing-function: ease-out;
+    opacity: 1;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* Hidden state - slides up out of view */
+.info-text-container.hidden {
+    translate: -50% -100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Close button styling */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 80px;
+    height: 35px;
+    background-color: rgba(80, 80, 80, 0.8);
+    border-width: 2px;
+    border-color: white;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+}
+
+.close-button:hover {
+    background-color: rgba(120, 120, 120, 0.9);
+    scale: 1.05;
+}
+
+.close-button:active {
+    background-color: rgba(150, 150, 150, 0.9);
+    scale: 0.98;
+}
+
+/* Close button text */
+.close-text {
+    font-size: 16px;
+    color: white;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Info text content */
+.info-text {
+    font-size: 18px;
+    color: white;
+    -unity-text-align: upper-left;
+    white-space: normal;
+    word-wrap: true;
+    padding: 10px 10px 10px 0;
+    margin-top: 10px;
+    margin-right: 100px; /* Space for close button */
+    overflow: auto;
+    max-height: 400px;
+    line-height: 1.4;
+}
+
+/* Scrollview styling for long text */
+.info-text .unity-scroll-view {
+    background-color: transparent;
+}
+
+.info-text .unity-scroll-view__content-viewport {
+    background-color: transparent;
+}
+
+.info-text .unity-scroll-view__content-container {
+    background-color: transparent;
+}
+
+/* Scrollbar styling to match theme */
+.info-text .unity-scroller--vertical {
+    width: 12px;
+    background-color: rgba(50, 50, 50, 0.5);
+    border-radius: 6px;
+}
+
+.info-text .unity-scroller--vertical .unity-slider__tracker {
+    background-color: rgba(50, 50, 50, 0.5);
+    border-radius: 6px;
+}
+
+.info-text .unity-scroller--vertical .unity-slider__dragger {
+    background-color: rgba(150, 150, 150, 0.8);
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: white;
+}
+
+.info-text .unity-scroller--vertical .unity-slider__dragger:hover {
+    background-color: rgba(180, 180, 180, 0.9);
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    .info-text-container {
+        width: 95%;
+        min-width: 300px;
+        padding: 15px;
+    }
+    
+    .info-text {
+        font-size: 16px;
+        margin-right: 90px;
+    }
+    
+    .close-button {
+        width: 70px;
+        height: 30px;
+    }
+    
+    .close-text {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .info-text-container {
+        max-height: 70%;
+        padding: 10px;
+    }
+    
+    .info-text {
+        font-size: 16px;
+        max-height: 250px;
+    }
+}

@@ -1,0 +1,30 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Style src="PresentationUI.uss" />
+    <ui:VisualElement class="presentation-container">
+        <!-- Text Display Area -->
+        <ui:VisualElement name="text-container" class="text-container">
+            <ui:Label name="slide-text" class="slide-text" text="Welcome to the presentation..." />
+        </ui:VisualElement>
+        
+        <!-- Navigation Controls -->
+        <ui:VisualElement class="navigation-container">
+            <ui:VisualElement class="navigation-buttons">
+                <ui:Button name="prev-button" class="nav-button prev-button" text="◀ Previous" />
+                <ui:Label name="slide-indicator" class="slide-indicator" text="1 / 5" />
+                <ui:Button name="next-button" class="nav-button next-button" text="Next ▶" />
+            </ui:VisualElement>
+            
+            <!-- Progress Bar -->
+            <ui:VisualElement class="progress-container">
+                <ui:VisualElement name="progress-bar" class="progress-bar">
+                    <ui:VisualElement name="progress-fill" class="progress-fill" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        
+        <!-- Skip/Continue Instructions -->
+        <ui:VisualElement class="instructions-container">
+            <ui:Label class="instructions-text" text="Use Arrow Keys or Space to navigate • Enter to skip text animation" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML> 

@@ -1,0 +1,74 @@
+/* Camera Rotation Buttons Styling */
+.camera-rotation-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    pointer-events: none;
+}
+
+.camera-rotation-button {
+    position: absolute;
+    width: 60px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-width: 2px;
+    border-color: white;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.camera-rotation-button:hover {
+    background-color: rgba(50, 50, 50, 0.8);
+    scale: 1.05;
+}
+
+.camera-rotation-button:active {
+    background-color: rgba(80, 80, 80, 0.9);
+    scale: 0.98;
+}
+
+.camera-rotation-button-left {
+    left: 20px;
+    top: 50%;
+    margin-top: -60px; /* Half of height (120px / 2) to center vertically */
+}
+
+.camera-rotation-button-right {
+    right: 20px;
+    top: 50%;
+    margin-top: -60px; /* Half of height (120px / 2) to center vertically */
+}
+
+.disabled {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.disabled:hover {
+    scale: 1;
+}
+
+.disabled:active {
+    scale: 1;
+}
+
+.camera-rotation-arrow {
+    font-size: 36px;
+    color: white;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}

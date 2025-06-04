@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<engine:UXML 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:engine="UnityEngine.UIElements" 
+    xmlns:editor="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd">
+    <engine:VisualElement name="root" class="root">
+    <engine:VisualElement name="main-menu-container" class="main-menu-container visible">
+        <engine:VisualElement name="title-container" class="title-container">
+            <engine:Label name="game-title" text="Vertex Vanguard" class="game-title"/>
+        </engine:VisualElement>
+        
+        <engine:VisualElement name="buttons-container" class="buttons-container">
+            <engine:Button name="start-game-button" class="menu-button">
+                <engine:Label text="Start game" class="button-text" name="start-game-button-text"/>
+            </engine:Button>
+            
+            <engine:Button name="settings-button" class="menu-button">
+                <engine:Label text="Settings" class="button-text" name="settings-button-text"/>
+            </engine:Button>
+            
+            <engine:Button name="credits-button" class="menu-button">
+                <engine:Label text="Credits" class="button-text" name="credits-button-text"/>
+            </engine:Button>
+            
+            <engine:Button name="exit-button" class="menu-button">
+                <engine:Label text="Leave game" class="button-text" name="exit-button-text"/>
+            </engine:Button>
+        </engine:VisualElement>
+
+        <engine:VisualElement name="credits-container" class="credits-container">
+            <engine:Button name="credits-close-button" class="credits-close-button">
+                <engine:Label text="×" class="close-button-text" name="close-button-text"/>
+            </engine:Button>
+            
+            <engine:Label text="Credits" class="credits-title" name="credits-title"/>
+            
+            <engine:Label text="Development Team:" class="credits-text category" name="made-by-label"/>
+            <engine:Label text="Sondre Nordmoen &amp; Dorian Badel - Game Design &amp; Programming" class="credits-text name"/>
+            <engine:Label text="Bachelor of Computer Science working on this project as part of their Master's level GameLab-3910 course at UiT The Arctic University of Norway" class="credits-text name"/>
+            
+            <engine:Label text="Music:" class="credits-text category" name="music-by-label"/>
+            <engine:Label text="mag. mus. art. Adrian Valčić - Created the soundtrack for the game" class="credits-text name"/>
+
+            <engine:Label text="Historical Consultation &amp; Background:" class="credits-text category" name="music-by-label"/>
+            <engine:Label text="mag. his. Luka Božinović - Provided historical consultation and background information" class="credits-text name"/>
+            
+            <engine:Label text="Unity Asset Store Assets:" class="credits-text category"/>
+            <engine:Label text="Low Poly Water - Ebru Dogan" class="credits-text name"/>
+            <engine:Label text="Fantasy Skybox FREE - Render Knight" class="credits-text name"/>
+            <engine:Label text="Low-Poly Simple Nature Pack - JustCreate" class="credits-text name"/>
+        </engine:VisualElement>
+    </engine:VisualElement>
+
+     <!-- Settings UI -->
+    <engine:VisualElement name="settings-overlay" class="settings-overlay settings-hidden">
+        <engine:VisualElement name="settings-container" class="settings-container">
+            <!-- Close Button -->
+            <engine:Button name="settings-close-button" class="settings-close-button">
+                <engine:Label text="×" />
+            </engine:Button>
+            
+            <!-- Settings Title -->
+            <engine:Label text="Settings" class="settings-title" />
+            
+            <!-- Audio Settings Section -->
+            <engine:VisualElement name="audio-settings" class="settings-section">
+                <engine:Label text="Audio settings" class="settings-section-title" />
+                
+                <!-- Music Volume -->
+                <engine:VisualElement class="settings-row">
+                    <engine:Label text="Music Volume" class="settings-label" />
+                    <engine:VisualElement class="settings-control-container">
+                        <engine:Slider name="music-volume-slider" class="settings-slider" 
+                                     low-value="0" high-value="100" value="65" />
+                        <engine:Label text="65%" name="music-volume-value" class="settings-slider-value" />
+                    </engine:VisualElement>
+                </engine:VisualElement>
+                
+                <!-- Music Pitch -->
+                <engine:VisualElement class="settings-row">
+                    <engine:Label text="Music pitch" class="settings-label" />
+                    <engine:VisualElement class="settings-control-container">
+                        <engine:Slider name="music-pitch-slider" class="settings-slider" 
+                                     low-value="-3" high-value="3" value="1" />
+                        <engine:Label text="1" name="music-pitch-value" class="settings-slider-value" />
+                    </engine:VisualElement>
+                </engine:VisualElement>
+                
+                <!-- SFX Volume -->
+                <engine:VisualElement class="settings-row">
+                    <engine:Label text="SFX Volume" class="settings-label" />
+                    <engine:VisualElement class="settings-control-container">
+                        <engine:Slider name="sfx-volume-slider" class="settings-slider" 
+                                     low-value="0" high-value="100" value="50" />
+                        <engine:Label text="50%" name="sfx-volume-value" class="settings-slider-value" />
+                    </engine:VisualElement>
+                </engine:VisualElement>
+            </engine:VisualElement>
+            
+            <!-- Graphics Settings Section -->
+            <engine:VisualElement name="graphics-settings" class="settings-section">
+                <engine:Label text="Graphics settings" class="settings-section-title" />
+                
+                <!-- VSync Mode -->
+                <engine:VisualElement class="settings-row">
+                    <engine:Label text="VSync Mode" class="settings-label" />
+                    <engine:VisualElement class="settings-control-container">
+                        <engine:DropdownField name="vsync-dropdown" class="settings-dropdown" 
+                                            choices="Off,On" index="0" />
+                    </engine:VisualElement>
+                </engine:VisualElement>
+                
+                <!-- Target Frame Rate -->
+                <engine:VisualElement class="settings-row">
+                    <engine:Label text="Target frame rate" class="settings-label" />
+                    <engine:VisualElement class="settings-control-container">
+                        <engine:DropdownField name="framerate-dropdown" class="settings-dropdown" 
+                                            choices="30,60,120,144,Unlimited" index="1" />
+                    </engine:VisualElement>
+                </engine:VisualElement>
+                
+                <!-- Display Mode -->
+                <engine:VisualElement class="settings-row">
+                    <engine:VisualElement class="settings-control-container">
+                        <engine:VisualElement class="settings-button-group">
+                            <engine:Button name="fullscreen-button" class="settings-toggle-button selected">
+                                <engine:Label text="Fullscreen" class="button-text small-text" />
+                            </engine:Button>
+                            <engine:Button name="bordered-button" class="settings-toggle-button">
+                                <engine:Label text="Bordered" class="button-text small-text" />
+                            </engine:Button>
+                            <engine:Button name="borderless-button" class="settings-toggle-button">
+                                <engine:Label text="Borderless" class="button-text small-text" />
+                            </engine:Button>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+    </engine:VisualElement>
+
+</engine:UXML> 

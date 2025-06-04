@@ -1,0 +1,221 @@
+/* Unity UI Toolkit Compatible Style Sheet */
+
+/* Main Container */
+.presentation-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Text Display Area - Base */
+.text-container {
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    padding: 40px;
+    margin-bottom: 60px;
+    border-width: 2px;
+    border-color: white;
+    align-self: center;
+}
+
+/* Text Container Positioning Classes */
+.text-container-left {
+    align-self: flex-start;
+}
+
+.text-container-right {
+    align-self: flex-end;
+}
+
+.text-container-center {
+    align-self: center;
+}
+
+.slide-text {
+    font-size: 24px;
+    color: white;
+    white-space: normal;
+    -unity-text-align: middle-center;
+    -unity-font-style: normal;
+}
+
+/* Navigation Container */
+.navigation-container {
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+}
+
+.navigation-buttons {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Navigation Buttons */
+.nav-button {
+    min-width: 120px;
+    height: 40px;
+    font-size: 24px;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    margin-left: 15px;
+    margin-right: 15px;
+    transition-duration: 0.1s;
+}
+
+.nav-button:hover {
+    background-color: rgba(50, 50, 50, 0.8);
+    scale: 1.05;
+}
+
+.nav-button:active {
+    background-color: rgba(80, 80, 80, 0.9);
+    scale: 0.98;
+}
+
+.nav-button:disabled {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-button:disabled:hover {
+    scale: 1;
+}
+
+.nav-button:disabled:active {
+    scale: 1;
+}
+
+/* Slide Indicator */
+.slide-indicator {
+    font-size: 18px;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    min-width: 80px;
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 60%;
+    align-self: center;
+    margin-top: 15px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: white;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: white;
+    border-radius: 5px;
+    width: 0%;
+}
+
+/* Instructions */
+.instructions-container {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    align-items: center;
+}
+
+.instructions-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    -unity-text-align: middle-center;
+    -unity-font-style: italic;
+}
+
+/* Responsive Design for Different Screen Sizes */
+@media (max-width: 800px) {
+    .text-container {
+        width: 95%;
+        padding: 25px;
+        margin-bottom: 40px;
+    }
+    
+    .slide-text {
+        font-size: 20px;
+    }
+    
+    .nav-button {
+        min-width: 100px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .slide-indicator {
+        font-size: 16px;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+.fade-out {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.slide-in-left {
+    translate: -100% 0;
+    transition-property: translate, opacity;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+}
+
+.slide-in-right {
+    translate: 100% 0;
+    transition-property: translate, opacity;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+}
+
+.slide-visible {
+    translate: 0 0;
+    opacity: 1;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+.invisible {
+    display: none;
+} 

@@ -1,0 +1,66 @@
+/* Bottom Right Button Styling */
+.bottom-right-buttons-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    z-index: 1;
+    flex-direction: column;
+}
+
+.invisible {
+    display: none;
+}
+
+.bottom-right-button {
+    width: auto;
+    height: auto;
+    min-width: 120px;
+    min-height: 40px;
+    padding: 12px 24px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-width: 2px;
+    border-color: white;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+    white-space: nowrap;
+}
+
+.bottom-right-button:hover {
+    background-color: rgba(50, 50, 50, 0.8);
+    scale: 1.05;
+}
+
+.bottom-right-button:active {
+    background-color: rgba(80, 80, 80, 0.9);
+    scale: 0.98;
+}
+
+.disabled {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.disabled:hover {
+    scale: 1;
+}
+
+.disabled:active {
+    scale: 1;
+}
+
+.bottom-right-text {
+    font-size: 24px;
+    color: white;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+} 

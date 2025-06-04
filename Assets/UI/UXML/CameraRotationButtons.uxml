@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<engine:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:engine="UnityEngine.UIElements"
+    xmlns:editor="UnityEditor.UIElements"
+    xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd">
+    
+    <!-- Camera Rotation Buttons -->
+    <engine:VisualElement name="camera-rotation-container" class="camera-rotation-container">
+        <engine:Button name="camera-rotate-left" class="camera-rotation-button camera-rotation-button-left">
+            <engine:Label text="&lt;" class="camera-rotation-arrow" name="left-arrow" />
+        </engine:Button>
+        <engine:Button name="camera-rotate-right" class="camera-rotation-button camera-rotation-button-right">
+            <engine:Label text="&gt;" class="camera-rotation-arrow" name="right-arrow" />
+        </engine:Button>
+    </engine:VisualElement>
+    
+    <!-- Bottom Right Buttons -->
+    <engine:VisualElement name="bottom-right-buttons-container" class="bottom-right-buttons-container">
+        <engine:Button name="bottom-right-button" class="bottom-right-button">
+            <engine:Label text="End Turn" class="bottom-right-text" name="bottom-right-text-0" />
+        </engine:Button>
+        <engine:Button name="bottom-right-button" class="bottom-right-button invisible">
+            <engine:Label text="End Turn" class="bottom-right-text" name="bottom-right-text-1" />
+        </engine:Button>
+        <engine:Button name="bottom-right-button" class="bottom-right-button invisible">
+            <engine:Label text="End Turn" class="bottom-right-text" name="bottom-right-text-2" />
+        </engine:Button>
+    </engine:VisualElement>
+
+    <engine:VisualElement name="main-menu-button-container" class="main-menu-button-container">
+        <engine:Button name="main-menu-button" class="main-menu-button">
+            <engine:Label text="Main Menu" class="main-menu-button-text" name="main-menu-button-text"/>
+        </engine:Button>
+    </engine:VisualElement>
+    
+    
+    
+</engine:UXML> 

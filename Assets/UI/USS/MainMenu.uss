@@ -1,0 +1,238 @@
+/* Main container that holds the entire menu */
+.root{
+    width: 100%;
+    height: 100%;
+}
+.main-menu-container {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    position: relative;
+    visibility: hidden;
+}
+
+.main-menu-container.visible {
+    visibility: visible;
+}
+
+/* Title styling */
+.title-container {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.game-title {
+    font-size: 72px;
+    color: white;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    margin-bottom: 40px;
+}
+
+/* Buttons container */
+.buttons-container {
+    width: 50%;
+    min-width: 300px;
+    max-width: 500px;
+    align-items: stretch;
+}
+
+/* Banner button styling */
+.menu-button {
+    height: 60px;
+    margin: 10px 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-width: 2px;
+    border-color: white;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+    overflow: visible;
+}
+
+.menu-button:hover {
+    background-color: rgba(50, 50, 50, 0.8);
+    scale: 1.05;
+}
+
+.menu-button:active {
+    background-color: rgba(80, 80, 80, 0.9);
+    scale: 0.98;
+}
+
+/* Banner decoration elements will be added via code */
+.banner-decoration {
+    position: absolute;
+    width: 20px;
+    height: 100%;
+}
+
+/* Button text styling */
+.button-text {
+    font-size: 24px;
+    color: white;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Responsive design for different screen sizes */
+@media screen and (max-width: 600px) {
+    .game-title {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+    
+    .buttons-container {
+        width: 80%;
+    }
+    
+    .menu-button {
+        height: 50px;
+    }
+    
+    .button-text {
+        font-size: 20px;
+    }
+    
+    .credits-container {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    .credits-text {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    
+    .credits-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .title-container {
+        margin-bottom: 20px;
+    }
+    
+    .game-title {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+    
+    .menu-button {
+        height: 40px;
+        margin: 5px 0;
+    }
+    
+    .credits-container {
+        width: 350px;
+        padding: 15px;
+    }
+    
+    .credits-text {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+    
+    .credits-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Credits container styling */
+.credits-container {
+    position: absolute;
+    top: 0;
+    right: -400px; /* Hidden off-screen initially */
+    width: 400px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-left: 2px solid white;
+    padding: 30px 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition-property: right;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    overflow: hidden;
+}
+
+.credits-container.visible {
+    right: 0;
+}
+
+/* Credits title styling */
+.credits-title {
+    font-size: 24px;
+    color: white;
+    -unity-font-style: bold;
+    -unity-text-align: upper-left;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Credits text styling */
+.credits-text {
+    font-size: 14px;
+    color: white;
+    -unity-text-align: upper-left;
+    margin-bottom: 12px;
+    width: 100%;
+    white-space: normal;
+}
+
+.credits-text.category {
+    -unity-font-style: bold;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 15px;
+}
+
+.credits-text.name {
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 10px;
+}
+
+/* Close button for credits */
+.credits-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-width: 1px;
+    border-color: white;
+    border-radius: 15px;
+    transition-duration: 0.2s;
+}
+
+.credits-close-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    scale: 1.1;
+}
+
+.credits-close-button:active {
+    background-color: rgba(255, 255, 255, 0.3);
+    scale: 0.95;
+}
+
+.close-button-text {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: white;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    width: 100%;
+    height: 100%;
+} 
